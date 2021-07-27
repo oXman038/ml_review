@@ -7,12 +7,14 @@ import matplotlib.pyplot as plt
 
 
 def print_model(model,
+                model_desc=True,
                 named_parameters=False,
                 short=False):
-  if short:
-    print('\n'.join(model.__str__().split('\n')[:30]))
-  else:
-    print(model)
+  if model_desc:
+    if short:
+      print('\n'.join(model.__str__().split('\n')[:30]))
+    else:
+      print(model)
 
   if named_parameters:
     if short:
