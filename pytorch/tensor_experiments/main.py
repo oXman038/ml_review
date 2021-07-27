@@ -23,7 +23,7 @@ def print_model(model,
         if idx>=20:
           break
     else:
-      for name, param in model.named_paramters():
+      for name, param in model.named_parameters():
         print("%30s | %s" % (name, param.size()))
 
 
